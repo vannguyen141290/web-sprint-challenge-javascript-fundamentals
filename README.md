@@ -25,14 +25,37 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
+ 
+.map runs through each elements in the array and returns a new array as the result of calling a provided function on each element. it is used to manipulating and reshape data.
+.filter loops through each item and return a new array of the elements that satisfied given condition(s). If the condition is not met, the current item will be skipped. it is used to filter out what are not needed based on conditions.
+.reduce helps manipulate and reshape data into a single value. It takes a callback known as reduce function. the function takes a previous value and a next value (accumulator and current value) and accumulate the values through each looping, starting with a starting point (for example. 0).
+
 
 2. Explain the difference between a callback and a higher order function.
 
+A higher order function is a function that receives another function as its parameter and returns a function.
+A callback is used as a parameter for another function called higher order function.
+
+
 3. Explain what a closure is.
+
+A closure is the combination of a function bundled together with references to the surrounding environment. A closure gives the ability for an inner function to access variables and parameters of the outter function's scope.
+
 
 4. Describe the four principles of the 'this' keyword.
 
+-First principles is global binding. When none of the other rules apply, THIS refers to the global object which is window or console in node, and it's undefined in strict mode.
+-Second is implicit binding - When a function is invoked, THIS refers to the object on the left side of the preceeding dot.
+-Third is new binding - Keyword NEW is used to construct a new object. When a function as a constructor function is invoked, THIS refers to the objects newly created.
+-Fourth is explicit binding - Usually three cases occur: 
+1. 'call'keyword is used: call invokes a function immidiately and specifies the context in which the function is invoked by passing in arguments one by one. THIS refers to that context.
+2.  'bind'keyword is used: it is exactly like CALL but invokes the function later.
+3. 'apply' keyword is used: its exactly like CALL but you can pass in a single array as the agrument.
+
+
 5. Why do we need super() in an extended class?
+
+- SUPER keyword refers the parent classs. It is used to call the constructor of the parent class in order to be able to access all the properties and methods that the parent class has.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
